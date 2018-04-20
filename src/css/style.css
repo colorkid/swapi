@@ -2,3 +2,32 @@
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 }
+
+body {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.side {
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(50% - 10px);
+	padding: 20px;
+	border: 1px solid #e2e2e2;
+	border-radius: 2px;
+	box-shadow: 0 0 1px 1px #e2e2e2;
+	overflow: hidden;
+}
+
+.planet {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 30px;
+	margin: 15px;
+	border: 1px solid #e2e2e2;
+	border-radius: 2px;
+	cursor: pointer;
+}

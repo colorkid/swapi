@@ -11,7 +11,3 @@ gulp.task('serve', function() {
     });
     browserSync.watch('src', browserSync.reload)
 });
-
-gulp.task('watch', ['serve'], function() {
-	gulp.watch(['./src/js/*.js']);
-}); 
