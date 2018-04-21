@@ -31,3 +31,21 @@ body {
 	border-radius: 2px;
 	cursor: pointer;
 }
+
+.resident {
+	display: flex;
+}
+
+.resident__next {
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+	border: 1px solid #e2e2e2;
+	border-radius: 12.5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.resident__next:hover {
+	box-shadow: 0 0 1px 1px #e2e2e2;
+}

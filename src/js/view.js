@@ -6,6 +6,7 @@ export default class View {
 		this.containerWestSide = document.querySelector(".side--west");
 		this.containerWestSide.addEventListener("click", handlers.onClickPlanet);
 		this.containerEastSide = document.querySelector(".side--east");
+		this.containerEastSide.addEventListener("click", handlers.onClickNextArrow);
 	}
 
 	renderPlanet(data) {
@@ -22,7 +23,7 @@ export default class View {
 	renderNameOfResident(name) {
 		this.containerEastSide.innerHTML = `<div class="resident">
 												<div class="resident__name">${name}</div>
-												<div class="resident__next"></div>
+												<div class="resident__next">-></div>
 											</div>`;
 	}
 
