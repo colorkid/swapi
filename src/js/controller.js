@@ -18,13 +18,23 @@ export default class Controller {
 		for (let i = 0; i < this.data.length; i++){
 			
 			if(event.target.dataset.planet === this.data[i].name){
-				console.log(this.data[i].residents[0]);//0 - это первый песронаж с планеты
+				this._getNameOfResident(this.data[i].residents[0]);
 			}
 
 		}
 
 	}
 
-	//осталось сделать метод который будет отправлять запрос к api на получение имени по url(this.data[i].residents[0])
+	_getNameOfResident(apiUrl) {
+		fetch(apiUrl)
+	    .then(response => response.json())
+	      .then(function(data) {
+	      	console.log(data.name);
+	      	this.view.renderNameOfResident(data.name);
+	    }).catch (
+	    response => {
+	      this.view.renderNameOfResident("Uninhabited planet")
+	    })
+	}
 
 }
