@@ -57,10 +57,9 @@ export default class Controller {
 		fetch(apiUrl)
 	    .then(response => response.json())
 	      .then((data) => {
-	      	this.view.renderNameOfResident(data.name);
+	      	this.view.renderNameOfResident(data.name, true);
 	    }).catch((error) => {
-	    	this.view.renderNameOfResident('Uninhabited planet');
-	    	console.log(this.indexOfPlanet);
+	    	this.view.renderNameOfResident('Uninhabited planet', false);
 	    	console.log(error.name);
 		    console.log(error.message);
 		    console.log(error.stack);

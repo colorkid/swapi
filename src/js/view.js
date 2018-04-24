@@ -20,11 +20,8 @@ export default class View {
 		this.containerWestSide.appendChild(fragmentPlanet);
 	}
 
-	renderNameOfResident(name) {
-		this.containerEastSide.innerHTML = `<div class="resident">
-												<div class="resident__name">${name}</div>
-												<div class="resident__next">-></div>
-											</div>`;
+	renderNameOfResident(name, boolleanArrow) {
+		let arrowRender = boolleanArrow ? `<div class="resident__next">-></div>` : "";
+		this.containerEastSide.innerHTML = `<div class="resident"><div class="resident__name">${name}</div>${arrowRender}</div>`;
 	}
-
 }
